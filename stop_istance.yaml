@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_master_k3s
+- hosts: tag_Name_ec2
   gather_facts: true
   connection: local
   tasks:
