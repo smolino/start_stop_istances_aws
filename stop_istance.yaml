@@ -10,4 +10,4 @@
         region: '{{ region }}'
         state: stopped
         wait: True
-        vpc_subnet_id: {{ subnet_id }}
+        vpc_subnet_id: '{{ subnet_id }}'
