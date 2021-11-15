@@ -1,6 +1,5 @@
 ---
-- name: Stop ec2 instances
-  hosts: tag_Name_'{{ tag_name }}'
+- hosts: tag_Name_'{{ tag_name }}'
   gather_facts: false
   connection: local
   tasks:
