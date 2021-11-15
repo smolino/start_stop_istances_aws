@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_aws_ec2
+- hosts: localhost
   gather_facts: true
   connection: local
   tasks:
