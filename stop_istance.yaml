@@ -1,6 +1,6 @@
 ---
 - name: Stop ec2 instances
-  hosts: Tag_Name:master_k3s
+  hosts: tag_Name_master_k3s
   gather_facts: false
   connection: local
   tasks:
