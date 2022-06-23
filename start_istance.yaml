@@ -3,7 +3,7 @@
   gather_facts: false
   connection: local
   tasks:
-   - name: Start ec2 instances
+#   - name: Start ec2 instances
      ec2:
        instance_ids: '{{ instance_ids }}'
        region: '{{ region }}'
