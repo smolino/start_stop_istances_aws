@@ -1,4 +1,3 @@
----
 - name: Start AWS VM
   hosts: localhost
   gather_facts: false
