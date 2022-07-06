@@ -1,13 +1,13 @@
 ---
 - name: Start AWS VM
-  hosts: localhost
-  gather_facts: false
-  connection: local
-  tasks:
-    - name: Start ec2 instances
-      ec2:
-        instance_ids: '{{ instance_ids }}'
-        region: '{{ region }}'
-        state: running
-        wait: True
-        vpc_subnet_id: '{{ subnet_id }}'
+   hosts: localhost
+   gather_facts: false
+   connection: local
+   tasks:
+     - name: Start ec2 instances
+       ec2:
+         instance_ids: '{{ instance_ids }}'
+         region: '{{ region }}'
+         state: running
+         wait: True
+         vpc_subnet_id: '{{ subnet_id }}'
