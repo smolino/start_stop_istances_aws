@@ -2,8 +2,8 @@
   hosts: localhost
   gather_facts: false
   connection: local
-   environment:
-     PATH: '{{ lookup(''env'', ''PATH'') }}:/home/{{ username }}/.local/bin/aws'
+  environment:
+    PATH: '{{ lookup(''env'', ''PATH'') }}:/home/{{ username }}/.local/bin/aws'
   tasks:
     - name: Start ec2 instances
 #      amazon.aws.ec2:
