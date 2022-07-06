@@ -4,5 +4,5 @@
   environment:
     PATH: '{{ lookup(''env'', ''PATH'') }}:/home/{{ username }}/.local/bin/aws'
   tasks:
-    - name: Start ec2 instances
+    - name: Stop ec2 instances
       shell: chdir=/home/{{ username }}/.local/bin/ ./aws ec2 stop-instances --instance-ids {{ instance_ids }}
