@@ -1,13 +1,8 @@
----
-- hosts: localhost
-  gather_facts: true
-  connection: local
+- name: Start AWS VM
+  hosts: AWX
+  gather_facts: false
+  environment:
+    PATH: '{{ lookup(''env'', ''PATH'') }}:/home/{{ username }}/.local/bin/aws'
   tasks:
-    - name: Stop ec2 instances
-#      amazon.aws.ec2:
-#        instance_ids: '{{ instance_ids }}'
-#        region: '{{ region }}'
-#        state: stopped
-#        wait: True
-#        vpc_subnet_id: '{{ subnet_id }}'
-      shell: aws stop-instance --instance-ids {{ instance_ids }}
+    - name: Start ec2 instances
+      shell: chdir=/home/{{ username }}/.local/bin/ ./aws ec2 stop-instances --instance-ids {{ instance_ids }}
