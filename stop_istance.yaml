@@ -1,4 +1,4 @@
-- name: Start AWS VM
+- name: Stop AWS VM
   hosts: AWX
   gather_facts: false
   environment:
