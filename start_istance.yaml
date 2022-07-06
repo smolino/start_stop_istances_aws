@@ -10,4 +10,4 @@
 #        state: running
 #        wait: True
 #        vpc_subnet_id: '{{ subnet_id }}'
-      shell: aws stop-instance --instance-ids {{ instance_ids }}
+      shell: aws start-instance --instance-ids {{ instance_ids }}
