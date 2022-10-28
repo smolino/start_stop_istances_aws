@@ -2,7 +2,7 @@
   hosts: AWX
   gather_facts: false
   environment:
-    PATH: '{{ lookup(''env'', ''PATH'') }}:/home/{{ username }}/.local/bin/aws'
+    PATH: '{{ lookup(''env'', ''PATH'') }}://usr/local/aws-cli/v2/2.6.1/bin/aws'
   tasks:
     - name: Start ec2 instances
-      shell: chdir=/home/{{ username }}/.local/bin/ ./aws ec2 start-instances --instance-ids {{ instance_ids }}
+      shell: chdir=//usr/local/aws-cli/v2/2.6.1/bin/ ./aws ec2 start-instances --instance-ids {{ instance_ids }}
